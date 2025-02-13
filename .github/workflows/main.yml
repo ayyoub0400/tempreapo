@@ -14,7 +14,7 @@ jobs:
 
         
       - name: Run workflow
-        uses: ./.github/workflows/addition.yml
+        uses: ./.github/workflows/action.yml
         with:
           number1: 1
           number2: 2
