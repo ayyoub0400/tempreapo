@@ -19,4 +19,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Run workflow
-              run: echo ${{ inputs.number1 }} + ${{ inputs.number2 }} = $((inputs.number1 + inputs.number2))
+              run: |
+                echo "Number 1: ${{ inputs.number1 }}"
+                echo "Number 2: ${{ inputs.number2 }}"
+                sum=$((${{ inputs.number1 }} + ${{ inputs.number2 }}))
+                echo "Sum: $sum"
